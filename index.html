@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Top Animal | متجر مستلزمات الحيوانات</title>
+<style>
+:root{--green:#5fae35;--dark:#173d22;--yellow:#ffd51c;--cream:#f7fff3;}
+*{box-sizing:border-box} body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--cream);color:#18301d}
+header{position:sticky;top:0;z-index:5;background:white;box-shadow:0 2px 12px #0001;display:flex;align-items:center;justify-content:space-between;padding:10px 6%;gap:20px}
+.logo{height:68px;width:auto;object-fit:contain} nav a{margin:0 8px;color:var(--dark);text-decoration:none;font-weight:bold}
+.hero{padding:55px 7%;background:linear-gradient(135deg,#efffdc,#fff);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px}
+.hero h1{font-size:clamp(32px,5vw,58px);margin:0 0 15px;color:var(--dark)} .hero p{font-size:20px;line-height:1.8}
+.cta{display:inline-block;background:var(--green);color:#fff;border:0;padding:14px 24px;border-radius:14px;font-size:18px;font-weight:bold;cursor:pointer;text-decoration:none}
+.hero-logo{width:min(100%,430px);display:block;margin:auto}
+section{padding:45px 7%} h2{font-size:32px;margin-top:0;color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.card{background:#fff;border-radius:20px;padding:24px;text-align:center;box-shadow:0 5px 20px #0000000c;border:1px solid #e4f0df}
+.emoji{font-size:48px} .card h3{margin:10px 0 8px} .card p{color:#5d6e60;min-height:45px;line-height:1.6} .card button{border:0;background:var(--yellow);padding:10px 18px;border-radius:10px;font-weight:bold;cursor:pointer}
+.info{background:#173d22;color:#fff;border-radius:24px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+footer{text-align:center;padding:30px;background:#102918;color:#dff2df}
+@media(max-width:700px){.hero{grid-template-columns:1fr;text-align:center}nav{display:none}.logo{height:55px}}
+</style>
+</head>
+<body>
+<header>
+  <img class="logo" src="logo.jpg" alt="Top Animal">
+  <nav><a href="#categories">الأقسام</a><a href="#about">عن المتجر</a><a href="#contact">تواصل معنا</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>Top Animal</h1>
+    <p>كل ما يحتاجه حيوانك الأليف في مكان واحد 🐾<br>اكتشف منتجاتنا واطلب بسهولة.</p>
+    <a class="cta" href="#categories">تصفح المنتجات</a>
+  </div>
+  <img class="hero-logo" src="logo.jpg" alt="شعار Top Animal">
+</section>
+
+<section id="categories">
+  <h2>تسوق حسب الفئة</h2>
+  <div class="grid"><article class="card">
+      <div class="emoji">🐱</div>
+      <h3>طعام القطط</h3>
+      <p>أغذية جافة ورطبة للقطط</p>
+      <button onclick="orderCategory('طعام القطط')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🧼</div>
+      <h3>رمل القطط</h3>
+      <p>أنواع وأحجام مختلفة</p>
+      <button onclick="orderCategory('رمل القطط')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🧸</div>
+      <h3>إكسسوارات القطط</h3>
+      <p>ألعاب، أوعية، أطواق وغيرها</p>
+      <button onclick="orderCategory('إكسسوارات القطط')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🐶</div>
+      <h3>مستلزمات الكلاب</h3>
+      <p>غذاء وإكسسوارات وعناية</p>
+      <button onclick="orderCategory('مستلزمات الكلاب')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🐦</div>
+      <h3>مستلزمات الطيور</h3>
+      <p>أغذية وأقفاص وإكسسوارات</p>
+      <button onclick="orderCategory('مستلزمات الطيور')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🐹</div>
+      <h3>مستلزمات الهامستر</h3>
+      <p>غذاء، فرشة، ألعاب ومستلزمات</p>
+      <button onclick="orderCategory('مستلزمات الهامستر')">اطلب الآن</button>
+    </article>
+<article class="card">
+      <div class="emoji">🐠</div>
+      <h3>مستلزمات الأسماك</h3>
+      <p>أغذية وأحواض ومستلزمات</p>
+      <button onclick="orderCategory('مستلزمات الأسماك')">اطلب الآن</button>
+    </article></div>
+</section>
+
+<section id="about">
+  <h2>لماذا Top Animal؟</h2>
+  <div class="info">
+    <div><strong>🐾 منتجات للحيوانات الأليفة</strong><br>مجموعة متنوعة للقطط والكلاب والطيور والأسماك والقوارض.</div>
+    <div><strong>📦 طلب سهل</strong><br>اختر ما تريد وأرسل طلبك مباشرة عبر واتساب.</div>
+    <div><strong>📍 متجر حقيقي</strong><br>يمكنك أيضًا زيارة المحل واستلام مشترياتك.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>اطلب الآن</h2>
+  <p>يمكنك إرسال طلبك عبر واتساب، وسنؤكد لك المنتجات والتوصيل والسعر.</p>
+  <button class="cta" onclick="orderCategory('طلب جديد من متجر Top Animal')">طلب عبر واتساب</button>
+</section>
+</main>
+
+<footer>© 2026 Top Animal — مستلزمات الحيوانات الأليفة</footer>
+
+<script>
+function orderCategory(name){
+  const msg = encodeURIComponent("السلام عليكم، أريد الاستفسار/الطلب من Top Animal: " + name);
+  window.open("https://wa.me/2130773706022?text=" + msg, "_blank");
+}
+</script>
+</body>
+</html>
